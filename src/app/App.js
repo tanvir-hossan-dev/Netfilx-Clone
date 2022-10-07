@@ -1,12 +1,20 @@
+import Banner from "../components/Banner/Banner";
 import Video from "../components/Row/Video";
 import { Requests } from "../Requests";
 
 function App() {
   return (
-    <>
-      <Video title="Netfilx Originals" fetchUrl={Requests.fetchNetflixOriginals} />
-      <Video title="Top Trending" fetchUrl={Requests.fetchTrending} />
-    </>
+    <div className="bg-[#111]">
+      <Banner />
+      <Video title="Netfilx Originals" fetchUrl={Requests.fetchNetflixOriginals} isSmall />
+      <Video title="Trending Now" fetchUrl={Requests.fetchTrending} />
+      <Video title="Top Rated" fetchUrl={Requests.fetchTopRated} />
+      {/* <Video title="Action Movies" fetchUrl={Requests.fetchActionMovies} />
+      <Video title="Comedy Movies" fetchUrl={Requests.fetchComedyMovies} />
+      <Video title="Horor Movies" fetchUrl={Requests.fetchHorrorMovies} />
+      <Video title="Romance Movies" fetchUrl={Requests.fetchRomanceMovies} />
+      <Video title="Documantaries" fetchUrl={Requests.fetchDocumentaries} /> */}
+    </div>
   );
 }
 
