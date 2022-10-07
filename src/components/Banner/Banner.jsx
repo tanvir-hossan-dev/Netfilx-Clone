@@ -5,7 +5,6 @@ import "./Banner.css";
 
 const Banner = () => {
   const [movie, setMovie] = useState({});
-  const base_url = "https://image.tmdb.org/t/p/original";
 
   useEffect(() => {
     async function fetchData() {
@@ -13,8 +12,8 @@ const Banner = () => {
       setMovie(data.results[Math.floor(Math.random() * data.results.length - 1)]);
     }
     fetchData();
-  }, [Requests.fetchNetflixOriginals]);
-  console.log(movie);
+  }, []);
+
   return (
     <div
       style={{ background: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")` }}

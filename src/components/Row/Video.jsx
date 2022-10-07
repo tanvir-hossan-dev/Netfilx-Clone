@@ -38,21 +38,21 @@ const Video = ({ title, fetchUrl, isSmall }) => {
         .catch((err) => {});
     }
   };
-
-  console.log(movies);
   return (
     <div>
       <h2 className="text-3xl text-white font-bold pb-4">{title}</h2>
       <div className="flex overflow-x-scroll overflow-y-hidden videos py-[20px]">
         {movies?.map((movie) => (
           <div key={movie.id} className="mx-[5px]">
-            <img
-              src={`${base_url}${isSmall ? movie.poster_path : movie.backdrop_path}`}
-              onClick={() => handleMovie(movie)}
-              alt=""
-              className={`w-full ${isSmall ? "max-h-[250px]" : "max-h-[100px]"}    object-contain  transition
+            {movie && (
+              <img
+                src={`${base_url}${isSmall ? movie.poster_path : movie.backdrop_path}`}
+                onClick={() => handleMovie(movie)}
+                alt=""
+                className={`w-full ${isSmall ? "max-h-[250px]" : "max-h-[100px]"}    object-contain  transition
               duration-500 hover:scale-[1.2] cursor-pointer overflow-hidden`}
-            />
+              />
+            )}
           </div>
         ))}
       </div>
