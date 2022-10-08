@@ -11,11 +11,11 @@ function App() {
       <Video title="NETFLIX ORIGINALS" fetchUrl={Requests.fetchNetflixOriginals} isSmall />
       <Video title="Trending Now" fetchUrl={Requests.fetchTrending} />
       <Video title="Top Rated" fetchUrl={Requests.fetchTopRated} />
-      {/* <Video title="Action Movies" fetchUrl={Requests.fetchActionMovies} />
+      <Video title="Action Movies" fetchUrl={Requests.fetchActionMovies} />
       <Video title="Comedy Movies" fetchUrl={Requests.fetchComedyMovies} />
       <Video title="Horor Movies" fetchUrl={Requests.fetchHorrorMovies} />
       <Video title="Romance Movies" fetchUrl={Requests.fetchRomanceMovies} />
-      <Video title="Documantaries" fetchUrl={Requests.fetchDocumentaries} /> */}
+      <Video title="Documantaries" fetchUrl={Requests.fetchDocumentaries} />
     </div>
   );
 }
